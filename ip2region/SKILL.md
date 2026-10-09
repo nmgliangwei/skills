@@ -6,7 +6,7 @@ whenToUse: 用户询问某个 IP 的归属地、运营商、省市，或询问�
 
 # ip2region IP 查询
 
-当前 profile 已在进程级接入了 ip2region MCP 服务器（https://mcp.ifconfig.cc），所有会话均可用，提供两个工具：
+本 SKILL 基于 [ip2region MCP 服务器](https://mcp.ifconfig.cc)，提供两个工具：
 
 - `mcp__ip2region__ip2region` — 查询指定 IP 的归属地。参数：`ip`（字符串，必填），例如 `{"ip": "113.3.3.100"}`，返回省市、运营商等信息。
 - `mcp__ip2region__get_local_ip` — 查询本机出口（公网）IP。参数 `your_ip` 是占位参数，实际不使用，可省略或传空。
