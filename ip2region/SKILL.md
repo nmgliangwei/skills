@@ -10,7 +10,16 @@ whenToUse: 用户询问某个 IP 的归属地、运营商、省市，或询问�
 
 - `mcp__ip2region__ip2region` — 查询指定 IP 的归属地。参数：`ip`（字符串，必填），例如 `{"ip": "113.3.3.100"}`，返回省市、运营商等信息。
 - `mcp__ip2region__get_local_ip` — 查询本机出口（公网）IP。参数 `your_ip` 是占位参数，实际不使用，可省略或传空。
-
+# 单独mcp使用方式
+```
+{
+  "mcpServers": {
+    "ip2region": {
+      "url": "https://mcp.ifconfig.cc"
+    }
+  }
+}
+```
 ## 使用约定
 
 1. 用户问某个 IP 的归属地/归属运营商时，优先直接调用 `mcp__ip2region__ip2region`，不要用 web_search 或 curl 第三方网站代替。
